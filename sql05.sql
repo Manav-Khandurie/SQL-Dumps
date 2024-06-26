@@ -20,7 +20,7 @@ SELECT worker_id , AVG(bonus_amount) as avg_bonus FROM bonus GROUP BY worker_id;
 
 SELECT worker_id , SUM(bonus_amount) as MAX_bonus FROM bonus GROUP BY worker_id; -- SUM bonus of a woker employee
 
-SELECT worker_id, C OUNT(worker_id) as total_bonus , SUM(bonus_amount) as Total_bonus FROM bonus Group BY Worker_id; -- Total Bonus amount per employee
+SELECT worker_id, COUNT(worker_id) as total_bonus , SUM(bonus_amount) as Total_bonus FROM bonus Group BY Worker_id; -- Total Bonus amount per employee
 
 SELECT worker_id, SUM(bonus_amount) as SUM_BONUS from bonus GROUP BY worker_id ORDER BY  SUM_BONUS DESC LIMIT 1; -- Employee with sum bonus with its id 
 
@@ -35,3 +35,5 @@ SELECT worker_id from (
 ) AS t1 
 Group By sum_bonus having sum_bonus>=4000 ;  
 -- ALl woker id whose sum bouns is greater than 4000
+
+SELECT id from worker WHERE MOD(id,2) != 0;
