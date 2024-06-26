@@ -213,15 +213,15 @@ DELETE FROM worker where id=10;
 
 UPDATE age SET is_active='YES', experience=2 where worker_id>=5;
 
-# UPDATE age SET experience=3; -- will give error in safe mode
+-- UPDATE age SET experience=3; -- will give error in safe mode
 
-# DELETE FROM age ; -- Will error in safe mode
+-- DELETE FROM age ; -- Will error in safe mode
 
 
-# INSERT INTO age (worker_id, age, experience, is_active) VALUES (10, 29, 5, 'NO');
-# DELETE FROM age WHERE worker_id=10; -- This would delete all the values with worker id =10 in child table age courtesy of ON DELETE CASCADE
+-- INSERT INTO age (worker_id, age, experience, is_active) VALUES (10, 29, 5, 'NO');
+-- DELETE FROM age WHERE worker_id=10; -- This would delete all the values with worker id =10 in child table age courtesy of ON DELETE CASCADE
 
-# DELETE FROM age where experience<=1; -- error as where on a non key coloumn
+-- DELETE FROM age where experience<=1; -- error as where on a non key coloumn
 
 REPLACE INTO age (worker_id, age, experience) VALUES
 (1,18,0),

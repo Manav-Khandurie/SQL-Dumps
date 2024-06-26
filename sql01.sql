@@ -26,4 +26,4 @@ SELECT * FROM employee;
 
 SELECT id,name FROM employee;
 
-#Comments
+-- Comments
